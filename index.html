@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HeadStart Student Support Programme</title>
+<link href="assets/embedded-image-1.png" rel="icon" type="image/png"/>
+<meta content="HeadStart Student Support Programme — student-led volunteering through secondary ECA, VAPPs, Booster sessions and in-class support." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#07375b;--navy2:#062c49;--gold:#f5b92d;--cream:#f8f7f2;--white:#fff;--ink:#162536;--muted:#68798b;--line:#dfe5e9;--green:#21a56d;--green-soft:#e7f7ef;--blue-soft:#eaf3f9;--shadow:0 14px 40px rgba(7,55,91,.10);--radius:18px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
+a{color:inherit} button,input{font:inherit} img{max-width:100%;display:block}
+.container{max-width:1180px;margin:auto;padding:0 28px}
+.utility{background:var(--navy2);color:#fff;font-size:12px}
+.utility-inner{max-width:1180px;margin:auto;padding:8px 28px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.utility a{text-decoration:none;opacity:.88}.utility a:hover{opacity:1}
+.util-links{display:flex;gap:20px;align-items:center}
+.topnav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+.nav-inner{max-width:1180px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap;row-gap:8px}
+.logo{width:150px;height:62px;object-fit:contain;flex-shrink:0;background:#fff;border-radius:3px}
+.nav-title{font-weight:800;color:var(--navy);font-size:15px;line-height:1.15;max-width:240px}
+.nav-title small{display:block;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:7px}
+.navlinks{flex-wrap:wrap;row-gap:6px}.navlinks a,.navlinks button{border:0;background:none;text-decoration:none;padding:10px 12px;border-radius:10px;font-size:13px;font-weight:700;color:#30465b;cursor:pointer;white-space:nowrap}
+.navlinks a:hover,.navlinks button:hover,.navlinks .active{background:var(--blue-soft);color:var(--navy)}
+.apply{background:var(--gold)!important;color:#3d2b00!important;padding:11px 17px!important;border-radius:999px!important;white-space:nowrap!important;display:inline-block!important}
+.menu{display:none;border:0;background:var(--blue-soft);color:var(--navy);padding:10px;border-radius:10px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(125deg,#07375b 0%,#0a4c76 58%,#0d6480 100%);color:#fff;padding:72px 0 86px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+.hero:before{width:460px;height:460px;right:-150px;top:-170px;background:rgba(245,185,45,.12)}
+.hero:after{width:330px;height:330px;left:-170px;bottom:-170px;background:rgba(255,255,255,.06)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800;color:var(--gold);margin-bottom:15px}
+.eyebrow:before{content:"";width:25px;height:2px;background:var(--gold)}
+.hero h1{font-family:"Times New Roman",Times,serif;font-style:italic;font-weight:700;font-size:clamp(40px,4.7vw,64px);line-height:1.02;margin:0 0 20px}
+.hero p{font-size:17px;max-width:680px;color:rgba(255,255,255,.83);margin:0}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;text-decoration:none;font-weight:800;border-radius:999px;padding:13px 20px;cursor:pointer}
+.btn-gold{background:var(--gold);color:#3b2b00}.btn-white{background:#fff;color:var(--navy)}
+.btn-outline{border:1px solid rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.07)}
+.hero-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:24px;padding:25px;backdrop-filter:blur(14px);box-shadow:0 18px 50px rgba(0,0,0,.12)}
+.hero-card .mini{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.65);font-weight:800}
+.hero-card h3{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:28px;margin:7px 0 13px}
+.hero-card p{font-size:13px;color:rgba(255,255,255,.72)}
+.stat-strip{background:#fff;border-bottom:1px solid var(--line);box-shadow:0 10px 25px rgba(7,55,91,.05)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0}
+.stat{padding:4px 22px;border-right:1px solid var(--line);text-align:center}.stat:last-child{border:0}
+.stat strong{display:block;color:var(--navy);font-size:25px;font-weight:800}.stat span{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;font-weight:800}
+.page{display:none}.page.active{display:block}.page.active .reveal{opacity:1;transform:none}
+.section{padding:70px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}
+.kicker{color:var(--gold);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.12em}
+h2{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--navy);font-size:38px;line-height:1.1;margin:6px 0 0}
+.lead{color:var(--muted);max-width:650px;font-size:14px}.underline{width:52px;height:3px;background:var(--gold);margin-top:14px;border-radius:5px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 4px 18px rgba(7,55,91,.05);position:relative;overflow:hidden}
+.feature:after{content:"";position:absolute;width:90px;height:90px;border-radius:50%;right:-35px;top:-35px;background:var(--blue-soft)}
+.icon{width:44px;height:44px;border-radius:13px;background:var(--blue-soft);display:grid;place-items:center;color:var(--navy);font-weight:900;font-size:20px;position:relative;z-index:1}
+.feature h3{margin:18px 0 7px;color:var(--navy);font-size:18px}.feature p{color:var(--muted);font-size:13px;margin:0}
+.note{margin-top:20px;background:var(--green-soft);border:1px solid #bfe9d5;color:#166c49;border-radius:14px;padding:14px 16px;font-size:13px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0}
+.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 14px;font-weight:800;font-size:12px;color:#496073;cursor:pointer}
+.filter.active{background:var(--navy);border-color:var(--navy);color:#fff}
+.search{display:flex;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px;max-width:540px;margin:0 0 22px}
+.search input{border:0;outline:0;background:transparent;flex:1;padding:8px 13px;font-size:13px}.search button{border:0;background:var(--navy);color:#fff;border-radius:999px;padding:10px 16px;font-weight:800}
+.programme-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.programme{background:#fff;animation:cardIn .65s both;border:1px solid var(--line);border-radius:18px;padding:22px;transition:.22s;display:flex;flex-direction:column;gap:11px;min-height:175px}.programme-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.programme:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(7,55,91,.10)}.programme h3{font-size:19px;line-height:1.25;margin:0;color:var(--navy)}
+.programme:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:#bfd0dc}
+.tag{display:inline-flex;width:max-content;border-radius:999px;padding:5px 9px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.tag-booster{background:#eaf3f9;color:var(--navy)}.tag-vapp{background:#e7f7ef;color:#17734e}.tag-eca{background:#fff2d5;color:#8b6508}
+.programme h3{margin:0;color:var(--navy);font-size:15px;line-height:1.35}.meta{font-size:12px;color:var(--muted)}.meta b{color:#40576b}
+.pills{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}.pill{background:#f3f6f8;border-radius:999px;padding:4px 8px;font-size:10px;color:#536a7b;font-weight:700}
+.inclass-hero{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;margin-bottom:25px;box-shadow:var(--shadow);display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center}
+.inclass-hero h3{font-family:"Playfair Display",Georgia,serif;font-style:italic;color:var(--navy);font-size:30px;margin:0 0 7px}
+.table-wrap{overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 20px rgba(7,55,91,.04)}
+table{width:100%;border-collapse:collapse;min-width:720px}
+th{text-align:left;background:var(--navy);color:#fff;padding:13px 15px;font-size:10px;text-transform:uppercase;letter-spacing:.06em}
+td{padding:14px 15px;border-bottom:1px solid var(--line);font-size:12.5px;vertical-align:top}tr:last-child td{border-bottom:0}tr.live{background:#fff7df}
+.live{color:#d71920;font-weight:800}.live-badge{display:inline-flex;align-items:center;gap:7px;background:#d71920;border:1px solid #b80f16;color:#fff;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 5px 14px rgba(215,25,32,.22);animation:livePulse 1.6s infinite}.live-badge .dot{width:7px;height:7px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.18);animation:dotPulse 1s infinite}.programme.live-card{border-color:#d71920;box-shadow:0 0 0 2px rgba(215,25,32,.08),0 16px 38px rgba(215,25,32,.12)}.live-label{display:block;margin-bottom:4px}@keyframes livePulse{0%,100%{transform:translateY(0);box-shadow:0 5px 14px rgba(215,25,32,.22)}50%{transform:translateY(-1px);box-shadow:0 8px 20px rgba(215,25,32,.32)}}@keyframes dotPulse{0%,100%{opacity:1}50%{opacity:.45}}
+.dot{width:7px;height:7px;border-radius:50%;background:#e7a600;box-shadow:0 0 0 4px rgba(231,166,0,.14)}
+.dept-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.dept{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px}
+.dept h3{font-size:14px;color:var(--navy);margin:0 0 9px}.dept ul{list-style:none;padding:0;margin:0;display:grid;gap:5px}.dept li{font-size:11.5px;color:var(--muted)}
+.dept li:before{content:"•";color:var(--gold);font-weight:900;margin-right:7px}
+.cta-band{background:var(--navy);color:#fff;border-radius:28px;padding:40px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.cta-band h2{color:#fff;font-size:34px}.cta-band p{color:rgba(255,255,255,.72);font-size:13px;max-width:630px;margin-top:8px}
+.soon{min-height:480px;display:grid;place-items:center;text-align:center}.soon-box{max-width:650px;background:#fff;border:1px solid var(--line);border-radius:26px;padding:55px 35px;box-shadow:var(--shadow)}
+.soon-number{font-size:52px;font-weight:900;color:var(--navy);opacity:.12}
+.footer-top{background:var(--navy);color:#fff;padding:52px 0 40px}.footer-grid{display:grid;grid-template-columns:1.25fr 1fr 1fr 1fr;gap:35px}
+.footer-top h3{font-size:13px;margin:0 0 13px;color:#fff}.footer-top p,.footer-top a{font-size:11.5px;color:rgba(255,255,255,.68);text-decoration:none}.footer-top a:hover{color:#fff}
+.footer-bottom{background:#062c49;color:rgba(255,255,255,.55);padding:13px 0;font-size:10.5px}.footer-bottom .container{display:flex;justify-content:space-between;gap:15px}
+@media(max-width:950px){.hero-grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2n){border-right:0}.feature-grid,.programme-grid{grid-template-columns:repeat(2,1fr)}.dept-grid{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.menu{display:block;margin-left:auto}}
+@media(max-width:620px){.directory-hero{padding:25px;display:block}.directory-badge{margin-top:18px}.container{padding:0 18px}.utility-inner{padding:8px 18px}.utility .util-links{display:none}.nav-inner{padding:10px 18px}.logo{width:74px;height:55px}.nav-title{font-size:12px}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-right:0;border-bottom:1px solid var(--line);padding:10px}.feature-grid,.programme-grid,.dept-grid,.footer-grid{grid-template-columns:1fr}.section{padding:48px 0}h2{font-size:32px}.inclass-hero,.cta-band{grid-template-columns:1fr;display:grid;padding:25px}.hero{padding:55px 0 65px}.hero h1{font-size:43px}.footer-bottom .container{display:block}}
+
+@keyframes cardIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* HeadStart banner replacement */
+.hero-banner{
+  width:100%;
+  background:#fff;
+  overflow:hidden;
+  line-height:0;
+}
+.hero-banner-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:none;
+  object-fit:contain;
+}
+.programme-intro{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  padding:68px 0 76px;
+}
+.programme-intro:before{
+  content:"";
+  position:absolute;
+  width:420px;height:420px;
+  right:-230px;top:-220px;
+  border-radius:50%;
+  background:rgba(7,55,91,.045);
+}
+.programme-intro-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:55px;
+  align-items:center;
+}
+.programme-intro-copy h1{
+  font-family:"Times New Roman",Times,serif;
+  font-style:italic;
+  font-weight:700;
+  color:var(--navy);
+  font-size:clamp(38px,4.6vw,62px);
+  line-height:1.02;
+  margin:0 0 20px;
+}
+.programme-intro-copy p{
+  color:#516579;
+  font-size:17px;
+  max-width:700px;
+  margin:0;
+}
+.eyebrow.dark{color:#b27a00}
+.eyebrow.dark:before{background:var(--gold)}
+.programme-intro-card{
+  background:#f5f8fa;
+  border:1px solid #d9e3e9;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 18px 50px rgba(7,55,91,.09);
+}
+.programme-intro-card .mini{
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#718295;
+  font-weight:800;
+}
+.programme-intro-card h3{
+  font-family:"Times New Roman",Times,serif;
+  font-style:italic;
+  color:var(--navy);
+  font-size:30px;
+  margin:7px 0 13px;
+}
+.programme-intro-card p{
+  color:#607487;
+  font-size:14px;
+}
+.programme-intro-card .note{
+  margin-top:18px;
+  background:#e8f0f5;
+  border:1px solid #d3e0e8;
+  color:var(--navy);
+}
+.btn-outline-dark{
+  border:1px solid #9bb0bf;
+  color:var(--navy);
+  background:#fff;
+}
+.btn-outline-dark:hover{
+  background:#edf3f7;
+  border-color:var(--navy);
+}
+@media(max-width:900px){
+  .programme-intro-grid{grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:620px){
+  .programme-intro{padding:48px 0 58px}
+  .programme-intro-copy h1{font-size:42px}
+  .hero-banner-image{min-height:260px;object-fit:cover;object-position:center}
+}
+
+/* Premium interaction layer */
+body{overflow-x:hidden;cursor:none} a,button,input,.filter{cursor:none}
+::selection{background:#0a4c76;color:#fff}.brand-banner{padding:28px 0 10px;background:var(--cream)}
+.banner-frame{border-radius:24px;overflow:hidden;box-shadow:0 18px 50px rgba(7,55,91,.12);background:#fff}.banner-frame img{width:100%;height:auto}
+.visual-showcase{padding-top:10px}.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.visual-card{position:relative;display:flex;min-height:230px;background:linear-gradient(135deg,#062c49,#0a4c76);border:1px solid rgba(255,255,255,.12);border-radius:22px;overflow:hidden;box-shadow:0 12px 32px rgba(7,55,91,.13);text-decoration:none;transform:translateZ(0)}.visual-card-wide{grid-column:1/-1;min-height:280px}.visual-overlay{position:absolute;z-index:2;inset:auto 24px 22px;color:#fff;display:flex;justify-content:space-between;align-items:end;gap:20px}.visual-overlay span{font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:800;color:var(--gold)}.visual-overlay b{font-size:17px}.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .9s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
+.stat strong{font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:30px;letter-spacing:-.02em}.stat strong.counter{font-variant-numeric:tabular-nums}.stat{transition:transform .35s ease}.stat:hover{transform:translateY(-4px)}
+/* Loading screen */
+#splash{position:fixed;inset:0;background:#fff;z-index:9999;display:grid;place-items:center;transition:opacity .8s ease,visibility .8s ease}.splash-inner{text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px;width:100%;padding:24px;box-sizing:border-box}.splash-brand-row{display:flex;align-items:center;justify-content:center;gap:clamp(12px,3vw,42px);width:min(1100px,96vw)}.splash-logo{width:min(270px,27vw);max-height:110px;object-fit:contain}.splash-cross{font-family:Arial,sans-serif;font-size:clamp(28px,4vw,54px);font-weight:300;color:#173c5b;line-height:1}.splash-programme-logo{width:min(600px,58vw);max-height:190px;object-fit:contain;background:transparent}
+@media(max-width:620px){.logo{width:48px;height:48px}.splash-brand-row{gap:8px}.splash-logo{width:27vw;max-height:70px}.splash-programme-logo{width:56vw;max-height:105px}.splash-cross{font-size:24px}}.logo{background:transparent;border-radius:0;object-fit:contain}.splash-line{width:58px;height:3px;background:var(--gold);border-radius:99px;margin:8px 0}.splash-title{font-family:'Times New Roman',Times,serif;font-weight:700;font-style:italic;font-size:clamp(20px,3vw,30px);color:var(--navy)}.splash-sub{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#718295;font-weight:700}.splash-progress{width:220px;height:3px;background:#e8edf0;border-radius:99px;overflow:hidden;margin-top:16px}.splash-progress span{display:block;height:100%;width:0;background:var(--navy);animation:loadbar 5.5s linear forwards}@keyframes loadbar{to{width:100%}}
+/* Custom blue cursor + click ripple */
+.cursor-dot{position:fixed;width:9px;height:9px;background:#0a64c8;border-radius:50%;pointer-events:none;z-index:10001;transform:translate(-50%,-50%);box-shadow:0 0 0 5px rgba(10,100,200,.12);transition:transform .08s ease}.cursor-ring{position:fixed;width:30px;height:30px;border:2px solid rgba(10,100,200,.45);border-radius:50%;pointer-events:none;z-index:10000;transform:translate(-50%,-50%);transition:left .12s ease,top .12s ease,transform .15s ease}.cursor-dot.click{transform:translate(-50%,-50%) scale(1.8)}.click-ripple{position:fixed;width:14px;height:14px;border:2px solid #0a64c8;border-radius:50%;pointer-events:none;z-index:9998;animation:ripple .65s ease-out forwards}@keyframes ripple{from{opacity:.75;transform:translate(-50%,-50%) scale(.5)}to{opacity:0;transform:translate(-50%,-50%) scale(4)}}
+body.loaded #splash{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-width:950px){body{cursor:auto}a,button,input,.filter{cursor:pointer}.cursor-dot,.cursor-ring{display:none}.visual-grid{grid-template-columns:1fr}.visual-card-wide{grid-column:auto}}
+@media(max-width:620px){.banner-frame{border-radius:16px}.visual-card,.visual-card-wide{min-height:210px}.visual-overlay{left:18px;right:18px}.visual-overlay b{font-size:14px}}
+
+.hero-banner{position:relative;height:clamp(500px,58vw,650px);overflow:hidden;background:#07375b}
+.hero-banner-image{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center center;filter:saturate(.9) brightness(.72);transform:scale(1.015)}
+.hero-image-dim{position:absolute;inset:0;background:linear-gradient(90deg,rgba(2,27,47,.76) 0%,rgba(3,35,59,.58) 42%,rgba(3,35,59,.32) 72%,rgba(3,35,59,.44) 100%),linear-gradient(0deg,rgba(0,0,0,.24),rgba(0,0,0,.08));pointer-events:none}
+.hero-overlay-content{position:absolute;inset:0;display:flex;align-items:center;z-index:2}
+.hero-overlay-content .programme-intro-grid{width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
+.hero-overlay-content .programme-intro-copy{color:#fff;max-width:720px}
+.hero-overlay-content .programme-intro-copy h1{font-family:"Times New Roman",Times,serif;font-style:italic;font-weight:700;font-size:clamp(42px,5vw,70px);line-height:1.02;margin:0 0 20px;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,.28)}
+.hero-overlay-content .programme-intro-copy p{font-size:17px;max-width:700px;color:rgba(255,255,255,.92);margin:0;text-shadow:0 2px 10px rgba(0,0,0,.25)}
+.hero-overlay-content .programme-intro-card{background:rgba(7,55,91,.38);border:1px solid rgba(255,255,255,.28);border-radius:24px;padding:27px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,.22);color:#fff}
+.hero-overlay-content .programme-intro-card .mini{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.75);font-weight:800}
+.hero-overlay-content .programme-intro-card h3{font-family:"Times New Roman",Times,serif;font-style:italic;font-size:30px;margin:7px 0 13px;color:#fff}
+.hero-overlay-content .programme-intro-card p{font-size:14px;color:rgba(255,255,255,.88)}
+.hero-overlay-content .programme-intro-card .note{background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.17);border-radius:15px;padding:14px;font-size:13px;font-weight:600;color:#fff}
+.hero-overlay-content .btn-outline{border:1px solid rgba(255,255,255,.55);color:#fff;background:rgba(0,0,0,.12);backdrop-filter:blur(5px)}
+.hero-overlay-content .btn-outline:hover{background:rgba(255,255,255,.16)}
+@media(max-width:850px){.hero-banner{height:auto;min-height:700px}.hero-banner-image{object-position:center center}.hero-overlay-content{position:relative;min-height:700px;padding:70px 0}.hero-overlay-content .programme-intro-grid{grid-template-columns:1fr;gap:30px}.hero-overlay-content .programme-intro-copy h1{font-size:clamp(40px,10vw,58px)}.hero-overlay-content .programme-intro-card{max-width:620px}}
+
+
+/* Final hero typography/layout fix */
+.hero-banner{line-height:normal;}
+.hero-overlay-content{line-height:normal;}
+.hero-overlay-content .programme-intro-grid > *{min-width:0;}
+.hero-overlay-content .programme-intro-copy h1{line-height:1.03;margin-bottom:22px;}
+.hero-overlay-content .programme-intro-copy p{line-height:1.55;margin:0 0 22px;}
+.hero-overlay-content .programme-intro-card h3{line-height:1.12;}
+.hero-overlay-content .programme-intro-card p{line-height:1.55;margin:0 0 16px;}
+.hero-overlay-content .programme-intro-card .note{line-height:1.45;}
+.hero-actions{line-height:normal;}
+@media(max-width:850px){
+  .hero-overlay-content .programme-intro-copy p{font-size:16px;}
+}
+
+.directory-hero{background:linear-gradient(135deg,#062c49,#0a4c76);color:#fff;border-radius:24px;padding:34px 36px;display:flex;align-items:center;justify-content:space-between;gap:28px;box-shadow:0 18px 45px rgba(7,55,91,.15);margin-bottom:24px}.directory-hero h2{color:#fff;margin:6px 0 10px}.directory-hero .lead{color:rgba(255,255,255,.78);max-width:760px}.directory-hero .underline{background:var(--gold)}.directory-badge{min-width:150px;text-align:center;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);border-radius:18px;padding:16px}.directory-badge strong{display:block;color:var(--gold);letter-spacing:.1em;font-size:13px}.directory-badge span{font-size:11px;color:rgba(255,255,255,.7)}.inclass-blue{background:linear-gradient(135deg,#062c49,#0a4c76);color:#fff;border-color:rgba(255,255,255,.08)}.inclass-blue h3{color:#fff}.inclass-blue .lead{color:rgba(255,255,255,.78)}.inclass-mark{font-family:"Times New Roman",serif;font-style:italic;font-weight:700;font-size:25px;line-height:.95;text-align:center;color:var(--gold);border:1px solid rgba(245,185,45,.5);border-radius:18px;padding:20px;min-width:110px}.teacher-network-grid{grid-template-columns:repeat(4,1fr)}.programme .pills{margin-top:auto}.programme .meta{color:#64788a}.programme .tag{align-self:flex-start}.programme.live-card .tag{margin-top:4px}.programme.live-card:before{content:"LIVE · HAPPENING NOW";display:inline-flex;align-self:flex-start;background:#d71920;color:#fff;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;letter-spacing:.05em;box-shadow:0 6px 16px rgba(215,25,32,.22)}
+
+/* Programme information additions */
+.info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+.info-card{background:var(--card,#fff);border:1px solid var(--line,#e5e7eb);border-radius:18px;padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.info-card h3{margin:0 0 10px}.info-card p{margin:0}.info-card ul{margin:12px 0 0;padding-left:20px}.info-card li{margin:7px 0}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+.step{border:1px solid var(--line,#e5e7eb);border-radius:18px;padding:22px;background:#fff}.step-num{font-weight:800;font-size:14px;letter-spacing:.08em;color:var(--gold,#d6a529);margin-bottom:10px}
+.path-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}.path-card{border-radius:20px;padding:26px;background:var(--navy,#062d52);color:#fff}.path-card h3{margin:0 0 8px}.path-card p{margin:0 0 16px}.path-card .btn{display:inline-block}
+.faq{margin-top:24px;display:grid;gap:10px}.faq details{border:1px solid var(--line,#e5e7eb);border-radius:14px;padding:16px 18px;background:#fff}.faq summary{cursor:pointer;font-weight:700}.faq p{margin:12px 0 0}
+@media(max-width:800px){.info-grid,.path-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+
+#page-account label{display:block;margin:12px 0 6px;font-weight:700}#page-account input{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid var(--line);border-radius:10px;font:inherit;margin-bottom:4px}#page-account form{display:grid;gap:4px}#page-account form .btn{margin-top:12px;border:0;cursor:pointer}#page-account .feature-grid{gap:20px}#page-account .note.error{color:#9b1c1c}
+
+/* Personal volunteer dashboard / activity controls */
+.volunteer-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}
+.summary-number{font-size:34px;font-weight:800;color:#063d66;line-height:1.1;margin:8px 0}
+.summary-small{color:#6a7f93;font-size:14px}
+.activity-list{margin-top:14px;display:flex;flex-direction:column;gap:10px;max-height:230px;overflow:auto}
+.activity-item{display:flex;justify-content:space-between;gap:14px;align-items:center;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.activity-item strong{display:block;color:#063d66}
+.activity-item span{font-size:13px;color:#71869a}
+.programme-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:14px}
+.signup-btn,.hours-log button,.hours-log input{
+  height:40px;
+  box-sizing:border-box;
+  border-radius:999px;
+  font-weight:700;
+}
+.signup-btn{border:1px solid #0b4d7a;background:#fff;color:#0b4d7a;padding:0 18px;cursor:pointer;min-width:86px}
+.signup-btn.signed{background:#0b4d7a;color:#fff}
+.hours-log{display:none!important;gap:6px;align-items:center}
+.hours-log input{width:78px!important;padding:0 13px!important;margin:0!important;border:1px solid var(--line);background:#fff;color:var(--navy);outline:none}
+.hours-log input:focus{border-color:#0b4d7a;box-shadow:0 0 0 3px rgba(11,77,122,.10)}
+.hours-log button{border:1px solid #d99c00;background:#f8b927;color:#18334a;padding:0 15px;cursor:pointer;min-width:98px}
+.activity-empty{color:#71869a;font-size:14px;margin:8px 0}
+@media(max-width:800px){.volunteer-summary{grid-template-columns:1fr}.programme-actions{align-items:stretch}.hours-log{width:100%}}
+<style>
+.admin-status-badge{display:inline-block;padding:5px 9px;border-radius:999px;font-size:.78rem;font-weight:800;background:#fff3d2;color:#7a5600}.admin-status-badge.approved{background:#e5f6eb;color:#176b3a}.admin-status-badge.rejected{background:#fde8e8;color:#9b1c1c}.admin-action-row{display:flex;gap:7px;flex-wrap:wrap}.admin-action{border:0;border-radius:8px;padding:8px 11px;font:inherit;font-weight:700;cursor:pointer}.admin-approve{background:#1f7a4d;color:#fff}.admin-reject{background:#f0dddd;color:#8d1d1d}.admin-empty{padding:24px;text-align:center;color:#6b7f91}
+
+
+/* Account authentication layout */
+.auth-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:stretch;
+}
+.auth-card{
+  padding:28px;
+  box-shadow:var(--shadow);
+}
+.auth-card h3{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:29px;line-height:1.15;margin:7px 0;color:var(--navy)}
+.auth-kicker,.motivation-kicker{
+  color:#b27a00;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.auth-subtext{color:var(--muted);font-size:12.5px;margin:0 0 20px}
+.auth-card form{display:grid;gap:8px}
+.auth-card label{font-size:11px;font-weight:800;color:#40576b;margin-top:4px}
+.auth-card input{
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:11px 12px;
+  outline:none;
+  background:#fff;
+  color:var(--ink);
+}
+.auth-card input:focus{border-color:#7fa7bf;box-shadow:0 0 0 3px rgba(7,55,91,.08)}
+.auth-card .btn{margin-top:7px}
+.motivation-box{
+  margin-top:20px;
+  background:linear-gradient(135deg,#07375b,#0a4c76);
+  color:#fff;
+  border-radius:22px;
+  padding:24px 28px;
+  text-align:center;
+  box-shadow:var(--shadow);
+}
+.motivation-box p{
+  font-family:"Playfair Display",Georgia,serif;
+  font-style:italic;
+  font-size:20px;
+  line-height:1.4;
+  margin:8px auto 17px;
+  max-width:760px;
+}
+.motivation-btn{
+  color:#fff;
+  border-color:rgba(255,255,255,.5);
+  background:rgba(255,255,255,.08);
+}
+.motivation-btn:hover{background:rgba(255,255,255,.16);border-color:#fff}
+
+@media(max-width:700px){
+  .auth-grid{grid-template-columns:1fr}
+}
+
+
+/* Hero banner: use the supplied clear HeadStart banner without cropping it */
+.hero-banner{
+  position:relative;
+  width:100%;
+  aspect-ratio:2048 / 899;
+  min-height:0;
+  height:auto;
+  overflow:hidden;
+  background:#07375b;
+}
+.hero-banner-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  filter:none;
+  transform:none;
+}
+.hero-image-dim{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(90deg,rgba(2,27,47,.58) 0%,rgba(3,35,59,.24) 45%,rgba(3,35,59,.08) 100%);
+}
+.hero-overlay-content{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+}
+.hero-overlay-content .programme-intro-copy{
+  color:#fff;
+  max-width:700px;
+}
+.hero-overlay-content .programme-intro-card{
+  background:rgba(7,55,91,.42);
+  border:1px solid rgba(255,255,255,.30);
+  border-radius:26px;
+  padding:28px;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 20px 60px rgba(0,0,0,.24);
+  color:#fff;
+}
+.hero-overlay-content .programme-intro-card h3{color:#fff;}
+.hero-overlay-content .programme-intro-card p{color:rgba(255,255,255,.9);}
+@media(max-width:850px){
+  .hero-banner{aspect-ratio:auto;height:520px;}
+  .hero-banner-image{height:100%;object-fit:cover;}
+  .hero-overlay-content{padding:24px 0;}
+}
+
+/* Final logo/layout refinements */
+/* Remove the extra dark-blue branding strip above the main navigation. */
+.utility{display:none !important;}
+/* Reduce the programme logo area in the main navigation so it does not dominate. */
+.topnav .nav-inner{gap:16px;}
+.topnav .logo{width:clamp(145px,17vw,205px) !important;height:48px !important;}
+.topnav .nav-title{font-size:13px;max-width:190px;}
+.topnav .nav-title small{font-size:9px;}
+/* Smaller, balanced logos on the loading screen. */
+.splash-brand-row{width:min(900px,94vw);gap:clamp(8px,1.8vw,24px);}
+.splash-logo{height:clamp(48px,6vw,72px) !important;max-height:72px !important;max-width:29vw !important;width:auto !important;}
+.splash-programme-logo{height:clamp(48px,6vw,72px) !important;max-height:72px !important;max-width:40vw !important;width:auto !important;}
+.splash-cross{font-size:clamp(20px,2.4vw,32px) !important;}
+@media(max-width:640px){
+ .topnav .logo{width:min(145px,38vw) !important;height:42px !important;}
+ .topnav .nav-title{font-size:11px;max-width:155px;}
+ .splash-brand-row{gap:7px;width:96vw;}
+ .splash-logo{height:44px !important;max-width:27vw !important;}
+ .splash-programme-logo{height:44px !important;max-width:39vw !important;}
+ .splash-cross{font-size:19px !important;}
+}
+</style>
+
+<style id="branding-layout-refinements">
+/* Updated branding layout to match the supplied reference */
+#splash{background:#fff;}
+.splash-inner{gap:14px;}
+.splash-brand-row{display:flex;align-items:center;justify-content:center;gap:clamp(14px,2.4vw,34px);width:min(1120px,96vw);}
+.splash-logo{width:auto;height:clamp(64px,8vw,94px);max-height:94px;max-width:34vw;object-fit:contain;flex:0 1 auto;}
+.splash-programme-logo{width:auto;height:clamp(64px,8vw,94px);max-height:94px;max-width:48vw;object-fit:contain;flex:0 1 auto;}
+.splash-cross{font-family:Arial,sans-serif;font-size:clamp(24px,3vw,40px);font-weight:400;color:#0b426b;line-height:1;flex:0 0 auto;}
+.splash-title{margin-top:4px;}
+.utility{background:#07395d;color:#fff;min-height:116px;display:flex;align-items:center;position:relative;overflow:hidden;}
+.utility::before,.utility::after{content:"";position:absolute;width:72px;height:72px;border:6px solid rgba(0,105,205,.45);border-radius:50%;pointer-events:none;}
+.utility::before{left:-35px;bottom:-28px;box-shadow:inset 0 0 0 9px rgba(0,105,205,.13);}
+.utility::after{right:-18px;top:-28px;box-shadow:inset 0 0 0 9px rgba(0,105,205,.13);}
+.utility-inner{width:min(1180px,100%);box-sizing:border-box;padding:20px 28px;display:flex;align-items:center;justify-content:flex-start;position:relative;z-index:1;}
+.utility-programme-logo{display:block;width:min(390px,72vw);height:auto;max-height:78px;object-fit:contain;}
+.topnav .nav-inner{gap:24px;}
+.topnav .logo{display:block;width:clamp(245px,29vw,360px);height:58px;max-width:100%;object-fit:contain;background:transparent;border-radius:0;flex-shrink:0;}
+@media(max-width:640px){
+ .splash-brand-row{gap:8px;width:96vw;}
+ .splash-logo{height:54px;max-width:31vw;}
+ .splash-programme-logo{height:54px;max-width:43vw;}
+ .splash-cross{font-size:22px;}
+ .utility{min-height:88px;}
+ .utility-inner{padding:15px 18px;}
+ .utility-programme-logo{width:min(310px,78vw);max-height:60px;}
+ .topnav .logo{width:min(250px,66vw);height:48px;}
+}
+</style>
+</head>
+<body>
+<div aria-label="Loading HeadStart Student Support Programme" id="splash">
+<div class="splash-inner">
+<div class="splash-brand-row">
+<img alt="HeadStart International School Phuket logo" class="splash-logo" src="assets/embedded-image-2.png"/>
+<span class="splash-cross" aria-label="and">×</span>
+<img alt="HeadStart Student Support Programme logo" class="splash-programme-logo" src="assets/embedded-image-3.png"/>
+</div>
+<div class="splash-line"></div>
+<div class="splash-title">Student Volunteer Support</div>
+<div class="splash-sub">HeadStart International School Phuket</div>
+<div class="splash-progress"><span></span></div>
+</div>
+</div>
+<div class="cursor-dot"></div><div class="cursor-ring"></div>
+<div class="utility" aria-label="HeadStart Student Support Programme branding">
+<div class="utility-inner">
+<img class="utility-programme-logo" alt="HeadStart Student Support Programme" src="assets/embedded-image-4.png" />
+</div>
+</div>
+</div>
+<header class="topnav">
+<div class="nav-inner">
+<a aria-label="HeadStart Student Support Programme home" data-page-link="home" href="#home">
+<img alt="HeadStart Student Support Programme logo" class="logo" src="assets/embedded-image-5.png"/>
+</a>
+<div class="nav-title"><small>HeadStart</small>Student Support Programme</div>
+<nav class="navlinks">
+<a data-page-link="home" href="#home">Home</a>
+<a data-page-link="secondary" href="#secondary">Secondary ECA &amp; VAPPs</a>
+<a data-page-link="inclass" href="#inclass">In-Class Support</a>
+<a data-page-link="leadership" href="#leadership">Founders &amp; Leadership</a>
+<a data-page-link="account" href="#account">Student Portal</a>
+<a class="apply" href="https://docs.google.com/forms/d/e/1FAIpQLSezb2MyNqfNY4rVPlYdfrp7M0tZLuLj8FtFiwO89M4cS6vZAQ/viewform?usp=dialog" rel="noopener" target="_blank">Volunteer ↗</a>
+</nav>
+<button class="menu" id="menuBtn">☰</button>
+</div>
+</header>
+<main>
+<section class="page active" id="page-home">
+<section class="hero-banner">
+<img alt="HeadStart International School Phuket — Inspiring a love of learning" class="hero-banner-image" src="assets/embedded-image-6.png"/>
+<div class="hero-image-dim"></div>
+<div class="hero-overlay-content">
+<div class="container programme-intro-grid">
+<div class="programme-intro-copy reveal">
+<div class="eyebrow">Student-led · Founded August 2026</div>
+<h1>HeadStart Student Support Programme</h1>
+<p>A student-led programme connecting students with teachers and younger students through VAPPs, Booster sessions and in-class support — giving you a practical way to lead, mentor and contribute to your school community.</p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSezb2MyNqfNY4rVPlYdfrp7M0tZLuLj8FtFiwO89M4cS6vZAQ/viewform?usp=dialog" rel="noopener" target="_blank">Apply to volunteer ↗</a>
+<a class="btn btn-outline" data-page-link="secondary" href="#secondary">Explore opportunities</a>
+</div>
+</div>
+<div class="programme-intro-card reveal">
+<div class="mini">What you can do</div>
+<h3>Support. Lead. Mentor.</h3>
+<p>Choose from secondary after-school activities or, if you are in Year 12 or 13, explore opportunities to support lessons directly with teacher agreement.</p>
+<div class="note">After-school volunteering: Years 11–13 · In-class support: Years 12–13</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">The programme</div><h2>What is it?</h2><div class="underline"></div></div>
+<p class="lead">Your feedback helps us organise volunteer support effectively and identify where support is most needed.</p>
+</div>
+<div class="feature-grid">
+<article class="feature"><div class="icon">01</div><h3>VAPPs &amp; Booster sessions</h3><p>Support secondary activities after school alongside teachers and coaches. Open to Years 11–13.</p></article>
+<article class="feature"><div class="icon">02</div><h3>In-class support</h3><p>Year 12 and 13 students can support Year 7–11 students in lessons where a teacher has agreed support is needed.</p></article>
+<article class="feature"><div class="icon">03</div><h3>Build evidence of leadership</h3><p>Develop communication, teamwork, leadership and mentoring skills through a real school-based volunteering role.</p></article>
+</div>
+<div class="note">Certificates will be provided to participating students at a later date. The programme is designed to give students meaningful experience while supporting teachers and younger students.</div>
+</div>
+</section>
+<div class="stat-strip"><div class="container"><div class="stats">
+<div class="stat"><strong class="counter" data-suffix="+" data-target="30">0+</strong><span>Student volunteers</span></div>
+<div class="stat"><strong class="counter" data-suffix="+" data-target="10">0+</strong><span>Subject areas</span></div>
+<div class="stat"><strong class="counter" data-suffix="+" data-target="20">0+</strong><span>Teachers &amp; coaches supported</span></div>
+<div class="stat"><strong>Y7–11</strong><span>Students supported</span></div>
+</div></div></div>
+<section class="section" style="padding-top:10px">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Secondary opportunities</div><h2>Explore by subject</h2><div class="underline"></div></div>
+<a class="btn btn-outline" data-page-link="secondary" href="#secondary" style="color:var(--navy);border-color:var(--navy)">View full directory</a>
+</div>
+<div class="dept-grid" id="homeSubjects"></div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">How it works</div><h2>From sign-up to support</h2><div class="underline"></div></div>
+<p class="lead">A simple pathway for students, teachers and the wider school community.</p>
+</div>
+<div class="steps">
+<article class="step"><div class="step-num">01</div><h3>Identify support</h3><p>Teachers identify where student volunteer support could be useful.</p></article>
+<article class="step"><div class="step-num">02</div><h3>Sign up</h3><p>Students choose opportunities that match their interests and availability.</p></article>
+<article class="step"><div class="step-num">03</div><h3>Get involved</h3><p>Volunteers attend the agreed session and work alongside teachers or younger students.</p></article>
+<article class="step"><div class="step-num">04</div><h3>Make an impact</h3><p>Students contribute to the school community while developing practical skills.</p></article>
+</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">For students</div><h2>Who can volunteer?</h2><div class="underline"></div></div>
+<p class="lead">Different pathways are available depending on your year group.</p>
+</div>
+<div class="info-grid">
+<article class="info-card"><h3>Years 11–13</h3><p>Take part in secondary VAPPs, Booster sessions and ECA / club opportunities.</p><ul><li>Choose from current opportunities</li><li>Follow the teacher or coach's guidance</li><li>No previous volunteering experience is required</li></ul></article>
+<article class="info-card"><h3>Years 12–13</h3><p>In addition to after-school opportunities, Year 12 and 13 students can support Year 7–11 lessons where teacher agreement has been given.</p><ul><li>Support rather than replace classroom teaching</li><li>Work alongside the teacher</li><li>Commit to the agreed session</li></ul></article>
+</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Get involved</div><h2>Choose your pathway</h2><div class="underline"></div></div>
+<p class="lead">Whether you are a student looking to volunteer or a teacher looking for support, the programme provides a clear starting point.</p>
+</div>
+<div class="path-grid">
+<article class="path-card"><h3>I'm a student</h3><p>Browse opportunities and register your interest in volunteering.</p><a class="btn btn-gold" href="https://docs.google.com/forms/d/e/1FAIpQLSezb2MyNqfNY4rVPlYdfrp7M0tZLuLj8FtFiwO89M4cS6vZAQ/viewform?usp=dialog" rel="noopener" target="_blank">Volunteer ↗</a></article>
+<article class="path-card"><h3>I'm a teacher</h3><p>Identify a lesson, Booster, VAPP or ECA where student support could be useful, then speak with the programme team to discuss the opportunity.</p><a class="btn btn-outline" data-page-link="leadership" href="#leadership">Programme team</a></article>
+</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Volunteer guidance</div><h2>What is expected?</h2><div class="underline"></div></div>
+<p class="lead">The programme works best when volunteers are reliable, respectful and ready to support.</p>
+</div>
+<div class="info-grid">
+<article class="info-card"><h3>Before the session</h3><ul><li>Confirm the opportunity and time</li><li>Arrive prepared and on time</li><li>Tell the teacher or programme team if you cannot attend</li></ul></article>
+<article class="info-card"><h3>During the session</h3><ul><li>Follow teacher instructions</li><li>Support rather than complete work for students</li><li>Be respectful, responsible and appropriate at all times</li></ul></article>
+</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Recognition</div><h2>Your contribution matters</h2><div class="underline"></div></div>
+<p class="lead">Volunteering provides an opportunity to contribute to the school community and develop communication, teamwork, leadership and mentoring skills.</p>
+</div>
+<div class="note">Certificates will be provided to participating students at a later date.</div>
+</div>
+</section>
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Questions</div><h2>Frequently asked questions</h2><div class="underline"></div></div>
+</div>
+<div class="faq">
+<details><summary>Who can volunteer?</summary><p>After-school secondary volunteering is open to Years 11–13. In-class support is available to Years 12–13 students with teacher agreement.</p></details>
+<details><summary>What if I’m not good or experienced enough?</summary><p>You do not need to be an expert to volunteer. Choose an opportunity that matches your interests and current strengths, follow the teacher’s guidance, and ask for help when you need it. Volunteering is also a chance to build confidence, communication, teamwork and mentoring experience while supporting others.</p></details>
+<details><summary>How do I choose the right opportunity?</summary><p>Look for an opportunity that matches your interests, year group and availability. You can use the filters and search bar in the Secondary ECA &amp; VAPP directory, and ask the relevant teacher if you are unsure.</p></details>
+<details><summary>What should I do if I cannot attend?</summary><p>Let the relevant teacher know as soon as possible if you cannot attend a session you signed up for. Giving notice helps the teacher plan and ensures the support can be organised effectively.</p></details>
+<details><summary>How are my volunteer hours recorded?</summary><p>After completing a volunteering session, use the hours section on the relevant opportunity to record the time you contributed. Keep your entries accurate so your volunteering record reflects your actual participation.</p></details>
+<details><summary>How do I sign up?</summary><p>Use the Volunteer form on this website to register your interest in the available opportunities.</p></details>
+<details><summary>Can I volunteer for more than one opportunity?</summary><p>You can register interest in opportunities that fit your availability and commitments. Final participation depends on the relevant session and teacher or coach.</p></details>
+<details><summary>What happens if I cannot attend?</summary><p>Let the relevant teacher, coach or programme team know as early as possible so the session can be managed appropriately.</p></details>
+<details><summary>Can teachers request student volunteers?</summary><p>Yes. Teachers can identify a lesson, Booster, VAPP or ECA where support could be useful and speak with the programme team about the opportunity.</p></details>
+<details><summary>Do volunteers receive certificates?</summary><p>Certificates will be provided to participating students at a later date.</p></details>
+</div>
+</div>
+</section>
+</section>
+<section class="page" id="page-account">
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Student portal</div><h2 id="accountTitle">Login or create an account</h2><div class="underline"></div></div>
+<p class="lead">Use your HeadStart school email to access your personal volunteer dashboard.</p>
+</div>
+<div id="authArea" style="max-width:1000px;margin:0 auto">
+<div class="auth-grid">
+<article class="feature auth-card">
+<div class="auth-kicker">New to the programme</div>
+<h3>Join the Programme</h3>
+<p class="auth-subtext">Create your account with your HeadStart school email to access the student support dashboard.</p>
+<form id="signupForm">
+<label>Name</label><input id="signupName" placeholder="Your full name" required="" type="text"/>
+<label>HeadStart email</label><input id="signupEmail" placeholder="yourname@headstartphuket.com" required="" type="email"/>
+<label>Password</label><input id="signupPassword" minlength="8" required="" type="password"/>
+<label>Confirm password</label><input id="signupConfirm" minlength="8" required="" type="password"/>
+<button class="btn btn-gold" type="submit">Get Started</button>
+<p class="note" id="signupMsg" style="display:none"></p>
+</form>
+</article>
+<article class="feature auth-card">
+<div class="auth-kicker">Welcome back</div>
+<h3>Welcome Back</h3>
+<p class="auth-subtext">Access your dashboard to manage your opportunities and record your volunteer hours.</p>
+<form id="loginForm">
+<label>Email or username</label><input id="loginEmail" placeholder="aphirak2063 or yourname@headstartphuket.com" required="" type="text" autocomplete="username"/>
+<label>Password</label><input id="loginPassword" required="" type="password"/>
+<button class="btn btn-gold" type="submit">Access Dashboard</button>
+<p class="note" id="loginMsg" style="display:none"></p>
+</form>
+</article>
+</div>
+<div class="motivation-box">
+<div class="motivation-kicker">A little motivation</div>
+<p id="motivationQuote">Small actions can create meaningful change.</p>
+<button class="btn btn-outline motivation-btn" id="newQuoteBtn" type="button">Show me another quote ↻</button>
+</div>
+</div>
+<div id="dashboardArea" style="display:none;max-width:1000px;margin:0 auto">
+<div class="directory-hero">
+<div><div class="kicker">My volunteer dashboard</div><h2 id="welcomeName">Welcome</h2><div class="underline"></div><p class="lead">Your personal volunteer area. Sign up for opportunities and record the hours you complete.</p></div>
+<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn btn-outline" id="adminDashboardBtn" style="display:none">Admin approval</button><button class="btn btn-outline" id="logoutBtn">Log out</button></div>
+</div>
+<p class="note" id="adminAccessHelp" style="display:none;margin:12px 0">Admin access is not configured for this account yet. Add this exact school email to the <code>programme_admins</code> table in Supabase and ensure its row-level security policies allow admins to read that table.</p>
+<div class="volunteer-summary">
+<article class="feature"><div class="icon">01</div><h3>Available opportunities</h3><p>Browse Boosters, VAPPs and ECA / Club opportunities. Each opportunity has its own sign-up and hours controls.</p><a class="btn btn-gold" data-page-link="secondary" href="#secondary">Browse opportunities</a></article>
+<article class="feature"><div class="icon">02</div><h3>My volunteer hours</h3><div class="summary-number" id="totalHours">0</div><div class="summary-small">total hours recorded</div><div class="activity-list" id="hoursList"><p class="activity-empty">No volunteer hours recorded yet.</p></div></article>
+<article class="feature"><div class="icon">03</div><h3>My sign-ups</h3><div class="summary-number" id="signupCount">0</div><div class="summary-small">opportunities signed up for</div><div class="activity-list" id="signupList"><p class="activity-empty">No opportunity sign-ups yet.</p></div></article>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="page" id="page-admin">
+<section class="section reveal">
+<div class="container">
+<div class="directory-hero">
+<div><div class="kicker">Programme administration</div><h2>Volunteer hour approvals</h2><div class="underline"></div><p class="lead">Review hours submitted by students. Only approved hours are included in a student's official total.</p></div>
+<div class="directory-badge"><strong>ADMIN</strong><span>Pending submissions</span></div>
+</div>
+<div class="note" id="adminStatus" style="display:none"></div>
+<div class="table-wrap" style="margin-top:24px">
+<table><thead><tr><th>Student</th><th>Opportunity</th><th>Hours</th><th>Submitted</th><th>Status</th><th>Action</th></tr></thead>
+<tbody id="adminHoursBody"><tr><td colspan="6">Loading…</td></tr></tbody></table>
+</div>
+</div>
+</section>
+</section>
+<section class="page" id="page-secondary">
+<section class="section reveal">
+<div class="container">
+<div class="directory-hero">
+<div><div class="kicker">Secondary opportunities</div><h2>Boosters, VAPPs &amp; ECA support</h2><div class="underline"></div><p class="lead">Browse the current secondary opportunities available to student volunteers. After-school volunteering is open to Years 11–13.</p></div>
+<div class="directory-badge"><strong>LIVE</strong><span>Schedules update automatically</span></div>
+</div>
+<div class="filters" id="typeFilters">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="Booster">Boosters</button>
+<button class="filter" data-filter="VAPP">VAPPs</button>
+<button class="filter" data-filter="ECA">ECA / Clubs</button>
+</div>
+<div class="search"><input id="programmeSearch" placeholder="Search subject, programme, teacher or day…"/><button>Search</button></div>
+<div class="programme-grid" id="programmeGrid"></div>
+</div>
+</section>
+</section>
+<section class="page" id="page-inclass">
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">Years 12–13</div><h2>In-class support</h2><div class="underline"></div></div>
+<p class="lead">A separate pathway for Year 12 and 13 students supporting Year 7–11 lessons with teacher agreement.</p>
+</div>
+<div class="inclass-hero inclass-blue">
+<div class="inclass-copy"><div>
+<div class="kicker">Years 12–13 only</div><h3>Support teachers. Support younger students.</h3><p class="lead">Work alongside teachers in Year 7–11 lessons where support has been identified and agreed. The current opportunities below are taken from the in-class programme schedule.</p></div>
+<div class="inclass-mark">IN<br/>CLASS</div>
+</div>
+</div>
+<div class="table-wrap">
+<table><thead><tr><th>Programme</th><th>Teacher / Coach</th><th>Day</th><th>Time</th><th>Status</th></tr></thead>
+<tbody id="inclassBody"></tbody></table>
+</div>
+<div class="note">In-class support is available for Year 12 and 13 students. Teacher agreement is required; this is not a replacement for classroom teaching.</div>
+</div>
+</section>
+</section>
+<section class="page" id="page-leadership">
+<section class="section reveal">
+<div class="container">
+<div class="section-head">
+<div><div class="kicker">The people behind the programme</div><h2>Founders &amp; leadership</h2><div class="underline"></div></div>
+<p class="lead">A future-facing space for programme leadership, student coordinators, department leads and expansion.</p>
+</div>
+<div class="feature-grid">
+<article class="feature"><div class="icon">A</div><h3>Aphirak Narula (Armaan)</h3><p><b>Founder · Y12 Student</b><br/>HeadStart International School Phuket<br/><a href="mailto:aphirak2063@headstartphuket.com">aphirak2063@headstartphuket.com</a></p></article>
+<article class="feature"><div class="icon">A</div><h3>Ananya Narula (Muskaan)</h3><p><b>Founder · Y12 Student</b><br/>HeadStart International School Phuket<br/><a href="mailto:ananya2062@headstartphuket.com">ananya2062@headstartphuket.com</a></p></article>
+<article class="feature"><div class="icon">A</div><h3>Achara Narula (Mehek)</h3><p><b>Founder · Y12 Student</b><br/>HeadStart International School Phuket<br/><a href="mailto:achara2061@headstartphuket.com">achara2061@headstartphuket.com</a></p></article>
+<article class="feature"><div class="icon">T</div><h3>Timothy Davidson</h3><p><b>Teacher Supervisor</b><br/>Head of Upper Secondary School<br/>HeadStart International School Phuket</p></article>
+<article class="feature"><div class="icon">E</div><h3>Emily Graham</h3><p><b>Teacher Supervisor</b><br/>Deputy Head of Upper Secondary<br/>HeadStart International School Phuket<br/><a href="mailto:egraham@headstartphuket.com">egraham@headstartphuket.com</a></p></article>
+</div>
+<div class="directory-hero" style="margin-top:28px;">
+<div><div class="kicker">Teacher network</div><h2>Teachers &amp; coaches</h2><div class="underline"></div><p class="lead">Teachers and coaches represented across the current in-class support, Booster and VAPP opportunities.</p></div>
+<div class="directory-badge"><strong>NETWORK</strong><span>In-class · Boosters · VAPPs</span></div>
+</div>
+<div class="dept-grid teacher-network-grid">
+<article class="dept"><h3>Teachers &amp; Coaches</h3><ul>
+<li>Thomas Hanby</li><li>Shauna Tunstall</li><li>Katy Clayton</li><li>Dean Wells</li><li>Annique (Nikki) De Beauville</li><li>Terri O'Neil</li><li>Benjamin Wilson</li>
+</ul></article>
+<article class="dept"><h3>Teachers &amp; Coaches</h3><ul>
+<li>Robert Garley</li><li>Paul Hickey</li><li>Harriet Neaves</li><li>Jill Owen</li><li>Ashish Mukundan</li><li>Athena Coddington-Wiratunga</li><li>Hayleigh Quigg</li>
+</ul></article>
+<article class="dept"><h3>Teachers &amp; Coaches</h3><ul>
+<li>Sophie McMeekin</li><li>Jamie Sadler</li><li>Lewis Kendall</li><li>Vincent Edouard</li><li>Tatiana Oparenko</li><li>Pharadee Praprutchob (Kru Fon)</li><li>Hathaikan Korkimseng (Kru Kan)</li>
+</ul></article>
+<article class="dept"><h3>Teachers &amp; Coaches</h3><ul>
+<li>Spencer Ellmore</li><li>Giovanni Guarino</li><li>Rachel Saffin</li><li>Joel Adams</li><li>Laila Husain</li><li>Nosheen Khan</li><li>James Snell</li>
+</ul></article>
+</div>
+</div>
+</section>
+</section>
+<section class="page" id="page-more">
+<section class="section soon">
+<div class="container">
+<div class="soon-box">
+<div class="soon-number">+</div>
+<div class="kicker">Future plans</div>
+<h2>Primary ECA &amp; VAPP volunteering</h2>
+<div class="underline" style="margin:14px auto"></div>
+<p class="lead" style="margin:0 auto">The next expansion is planned to open Primary Booster, ECA and VAPP volunteering to students in Years 10–13, creating a wider pathway for students to support younger pupils.</p>
+</div>
+</div>
+</section>
+</section>
+</main>
+<footer>
+<div class="footer-top">
+<div class="container footer-grid">
+<div>
+<img alt="HeadStart Student Support Programme logo" class="logo" src="assets/embedded-image-7.png"/>
+<h3>HeadStart Student Support Programme</h3>
+<p>A student-led programme connecting volunteering, leadership and practical support across the HeadStart community.</p>
+</div>
+<div><h3>Programme</h3><a data-page-link="secondary" href="#secondary">Secondary ECA &amp; VAPPs</a><br/><a data-page-link="inclass" href="#inclass">In-Class Support</a><br/><a data-page-link="more" href="#more">Future Plans</a></div>
+<div><h3>About</h3><a data-page-link="leadership" href="#leadership">Founders &amp; Leadership</a></div>
+<div><h3>Get involved</h3><a href="https://docs.google.com/forms/d/e/1FAIpQLSezb2MyNqfNY4rVPlYdfrp7M0tZLuLj8FtFiwO89M4cS6vZAQ/viewform?usp=dialog" rel="noopener" target="_blank">Volunteer form ↗</a><p style="margin-top:10px">After-school: Years 11–13<br/>In-class: Years 12–13</p></div>
+</div>
+</div>
+<div class="footer-bottom"><div class="container"><span>HeadStart International School Phuket · Student Support Programme</span><span>Founded August 2026</span></div></div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+
+// Premium motion and interaction layer
+window.addEventListener('load',()=>{ setTimeout(()=>document.body.classList.add('loaded'),5500); });
+(function(){
+  const dot=document.querySelector('.cursor-dot'), ring=document.querySelector('.cursor-ring');
+  if(dot&&ring){ document.addEventListener('mousemove',e=>{dot.style.left=e.clientX+'px';dot.style.top=e.clientY+'px';ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';}); document.addEventListener('mousedown',e=>{dot.classList.add('click');const r=document.createElement('span');r.className='click-ripple';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),700)});document.addEventListener('mouseup',()=>dot.classList.remove('click')); }
+  const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  document.querySelectorAll('.counter').forEach(el=>{const target=Number(el.dataset.target||0),suffix=el.dataset.suffix||'';let done=false;const obs=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting&&!done){done=true;let start=0,t0=performance.now();const tick=t=>{const p=Math.min((t-t0)/1300,1),eased=1-Math.pow(1-p,3);el.textContent=Math.floor(target*eased)+suffix;if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick);obs.disconnect()}}),{threshold:.8});obs.observe(el)});
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const id=a.getAttribute('href');if(id&&id.length>1){const target=document.querySelector(id);if(target){e.preventDefault();const y=target.getBoundingClientRect().top+window.scrollY-70;const start=window.scrollY,d=y-start,dur=1100,t0=performance.now();function step(t){const p=Math.min((t-t0)/dur,1),ease=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;window.scrollTo(0,start+d*ease);if(p<1)requestAnimationFrame(step)}requestAnimationFrame(step)}}}));
+})();
+
+const SUPABASE_URL = "https://ydthmrxxzxvolngktkti.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_l1WyvQFvcH-_sjr5vrxAWQ_rN6UMZqu";
+const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+
+function showMessage(el,message,error=false){
+  el.textContent=message;
+  el.style.display='block';
+  el.classList.toggle('error',error);
+}
+
+function isHeadStartEmail(email){
+  return email.toLowerCase().endsWith('@headstartphuket.com');
+}
+
+function updateAccountPage(user){
+  currentVolunteerUser=user||null;
+  const auth=document.getElementById('authArea');
+  const dash=document.getElementById('dashboardArea');
+  const title=document.getElementById('accountTitle');
+  if(user){
+    const name=user.user_metadata?.name || user.email?.split('@')[0] || 'Student';
+    auth.style.display='none';
+    dash.style.display='block';
+    document.getElementById('welcomeName').textContent='Welcome, '+name;
+    title.textContent='My account';
+    loadVolunteerActivity();
+    checkAdminAccess();
+  }else{
+    auth.style.display='block';
+    dash.style.display='none';
+    title.textContent='Login or create an account';
+    volunteerHours=[];
+    volunteerSignups=[];
+  }
+}
+
+document.getElementById('signupForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const msg=document.getElementById('signupMsg');
+  const name=document.getElementById('signupName').value.trim();
+  const email=document.getElementById('signupEmail').value.trim().toLowerCase();
+  const password=document.getElementById('signupPassword').value;
+  const confirm=document.getElementById('signupConfirm').value;
+
+  if(!isHeadStartEmail(email)){
+    showMessage(msg,'Please use your HeadStart school email (@headstartphuket.com).',true);
+    return;
+  }
+  if(password!==confirm){
+    showMessage(msg,'Passwords do not match.',true);
+    return;
+  }
+  if(password.length<8){
+    showMessage(msg,'Password must be at least 8 characters.',true);
+    return;
+  }
+
+  showMessage(msg,'Creating your account…');
+  try{
+    const {data,error}=await supabaseClient.auth.signUp({
+      email,
+      password,
+      options:{
+        data:{name},
+        emailRedirectTo: window.location.origin + window.location.pathname
+      }
+    });
+    if(error){
+      showMessage(msg,error.message,true);
+      return;
+    }
+
+    if(data.session){
+      showMessage(msg,'Account created successfully.');
+      updateAccountPage(data.user);
+    }else{
+      showMessage(msg,'Account created. Check your HeadStart email to confirm your account, then log in.');
+    }
+  }catch(err){
+    console.error(err);
+    showMessage(msg,'Could not connect to the authentication service.',true);
+  }
+});
+
+document.getElementById('loginForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const msg=document.getElementById('loginMsg');
+  let email=document.getElementById('loginEmail').value.trim().toLowerCase();
+  const password=document.getElementById('loginPassword').value;
+
+  // Supabase authenticates with an email address, so expand a school username.
+  if(email && !email.includes('@')) email = email + '@headstartphuket.com';
+  if(!isHeadStartEmail(email)){
+    showMessage(msg,'Please use your HeadStart username or school email (@headstartphuket.com).',true);
+    return;
+  }
+
+  showMessage(msg,'Logging in…');
+  try{
+    const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+    if(error){
+      showMessage(msg,error.message,true);
+      return;
+    }
+    showMessage(msg,'Logged in successfully.');
+    updateAccountPage(data.user);
+  }catch(err){
+    console.error(err);
+    showMessage(msg,'Could not connect to the authentication service.',true);
+  }
+});
+
+document.getElementById('logoutBtn').addEventListener('click',async()=>{
+  await supabaseClient.auth.signOut();
+  updateAccountPage(null);
+});
+
+(async()=>{
+  const {data}=await supabaseClient.auth.getSession();
+  updateAccountPage(data.session?.user || null);
+})();
+
+supabaseClient.auth.onAuthStateChange((_event,session)=>{
+  updateAccountPage(session?.user || null);
+});
+
+document.getElementById('adminDashboardBtn')?.addEventListener('click',()=>showPage('admin'));
+
+const PROGRAMMES = [{"name":"CAPA Create","years":"Y7–13","teacher":"Aidan Ross","day":"Monday","start":"15:30","end":"16:20","room":"Art 2","type":"ECA"},{"name":"Art Club","years":"Y7–9","teacher":"Endly Mindaro","day":"Tuesday","start":"15:30","end":"16:20","room":"Art 2","type":"ECA"},{"name":"Guitar and Ukulele Club","years":"Y7–9","teacher":"Thomas Hanby","day":"Thursday","start":"15:30","end":"16:20","room":"Music 1","type":"ECA"},{"name":"Music GCSE Booster","years":"Y10–11","teacher":"Thomas Hanby","day":"Tuesday","start":"15:30","end":"16:20","room":"Music 1","type":"Booster"},{"name":"Drama IGCSE Booster","years":"Y10–11","teacher":"Shauna Tunstall","day":"Thursday","start":"15:30","end":"16:20","room":"Secondary Hall","type":"Booster"},{"name":"Art Exam GCSE Booster","years":"Y10","teacher":"Katy Clayton","day":"Tuesday","start":"15:30","end":"16:20","room":"Art 1","type":"Booster"},{"name":"Art Club","years":"Y7–9","teacher":"Mr Mindaro","day":"Monday","start":"15:30","end":"16:20","room":"","type":"ECA"},{"name":"Art Exam GCSE Booster","years":"Y11","teacher":"Katy Clayton","day":"Thursday","start":"15:30","end":"16:20","room":"Art 1","type":"Booster"},{"name":"Design & Technology GCSE Exam Booster","years":"Y10–11","teacher":"Dean Wells","day":"Monday","start":"15:30","end":"16:20","room":"Design & Technology","type":"Booster"},{"name":"English Booster","years":"Y7–8","teacher":"Annique (Nikki) De Beauville","day":"Monday","start":"15:30","end":"16:20","room":"English 3","type":"Booster"},{"name":"English Booster","years":"Y9","teacher":"Terri O'Neil","day":"Tuesday","start":"15:30","end":"16:20","room":"English 5","type":"Booster"},{"name":"Maths Booster","years":"Y7–8","teacher":"Benjamin Wilson","day":"Thursday","start":"15:30","end":"16:20","room":"Maths 4","type":"Booster"},{"name":"Maths Booster","years":"Y9","teacher":"Robert Garley","day":"Monday","start":"15:30","end":"16:20","room":"Maths 1","type":"Booster"},{"name":"Maths IGCSE Booster","years":"Y10","teacher":"Paul Hickey","day":"Tuesday","start":"15:30","end":"16:20","room":"Maths 3","type":"Booster"},{"name":"Science Booster","years":"Y7–8","teacher":"Harriet Neaves","day":"Tuesday","start":"15:30","end":"16:20","room":"Science 2","type":"Booster"},{"name":"Science Biology & Chemistry IGCSE Booster","years":"Y10–11","teacher":"Jill Owen","day":"Monday","start":"15:30","end":"16:20","room":"Science 6","type":"Booster"},{"name":"Science Physics IGCSE Booster","years":"Y11","teacher":"Ashish Mukundan","day":"Monday","start":"15:30","end":"16:20","room":"Science 2","type":"Booster"},{"name":"Geography IGCSE Booster","years":"Y11","teacher":"Athena Coddington-Wiratunga","day":"Tuesday","start":"15:30","end":"16:20","room":"Humanities 3","type":"Booster"},{"name":"History IGCSE Booster","years":"Y11","teacher":"Hayleigh Quigg","day":"Tuesday","start":"15:30","end":"16:20","room":"Humanities 2","type":"Booster"},{"name":"PE IGCSE Booster","years":"Y10–11","teacher":"Sophie McMeekin","day":"Monday","start":"15:30","end":"16:20","room":"Humanities 1","type":"Booster"},{"name":"Sport Level 2 BTEC Clinic Booster","years":"Y11","teacher":"Jamie Sadler","day":"Monday","start":"15:30","end":"16:20","room":"English 1","type":"Booster"},{"name":"Computer Science IGCSE Booster","years":"Y10–11","teacher":"Lewis Kendall","day":"Thursday","start":"15:30","end":"16:20","room":"Secondary Computing 3","type":"Booster"},{"name":"Business Studies IGCSE Booster","years":"Y10–11","teacher":"Vincent Edouard","day":"Tuesday","start":"15:30","end":"16:20","room":"Business 2","type":"Booster"},{"name":"Russian Booster","years":"Y5–9","teacher":"Tatiana Oparenko","day":"Friday","start":"15:10","end":"16:00","room":"Languages 8","type":"Booster"},{"name":"Thai First Language Booster — Session 1","years":"Y7–9","teacher":"Pharadee Praprutchob (Kru Fon)","day":"Tuesday","start":"15:30","end":"16:20","room":"Secondary Thai 1","type":"Booster"},{"name":"Thai First Language Booster — Session 2","years":"Y7–9","teacher":"Hathaikan Korkimseng (Kru Kan)","day":"Friday","start":"15:10","end":"16:00","room":"Secondary Thai 2","type":"Booster"},{"name":"Thai First Language Booster","years":"Y10–11","teacher":"Hathaikan Korkimseng (Kru Kan)","day":"Thursday","start":"15:30","end":"16:20","room":"Secondary Thai 2","type":"Booster"},{"name":"Science Scholars","years":"Y7–9","teacher":"Spencer Ellmore","day":"Monday","start":"15:30","end":"16:20","room":"Science 5","type":"VAPP"},{"name":"Communication Club","years":"Y10–13","teacher":"Giovanni Guarino","day":"Tuesday","start":"15:30","end":"16:20","room":"Science 1","type":"VAPP"},{"name":"Advanced Music Ensemble","years":"Y7–13","teacher":"Rachel Saffin","day":"Tuesday","start":"15:30","end":"16:20","room":"Secondary Hall","type":"VAPP"},{"name":"Theatre Play","years":"Y7–13","teacher":"Shauna Tunstall / Joel Adams","day":"Monday","start":"15:30","end":"16:20","room":"Secondary Hall","type":"VAPP"},{"name":"ESL","years":"Y10–11","teacher":"Lauren Davidson","day":"Thursday","start":"15:30","end":"16:20","room":"Secondary EAL","type":"EAL"}];
+let volunteerHours = [];
+let volunteerSignups = [];
+let currentVolunteerUser = null;
+
+function opportunityId(index){
+  return `programme-${index}`;
+}
+
+async function loadVolunteerActivity(){
+  if(!currentVolunteerUser) return;
+  const [hoursResult, signupsResult] = await Promise.all([
+    supabaseClient.from('volunteer_hours').select('*').eq('user_id', currentVolunteerUser.id).order('created_at',{ascending:false}),
+    supabaseClient.from('volunteer_signups').select('*').eq('user_id', currentVolunteerUser.id).order('created_at',{ascending:false})
+  ]);
+  if(hoursResult.error || signupsResult.error){
+    console.error(hoursResult.error || signupsResult.error);
+    document.getElementById('hoursList').innerHTML='<p class="activity-empty">Activity storage is not set up yet. Run the supplied Supabase SQL setup once.</p>';
+    document.getElementById('signupList').innerHTML='<p class="activity-empty">Activity storage is not set up yet. Run the supplied Supabase SQL setup once.</p>';
+    return;
+  }
+  volunteerHours = hoursResult.data || [];
+  volunteerSignups = signupsResult.data || [];
+  renderVolunteerActivity();
+  renderProgrammes();
+}
+
+function renderVolunteerActivity(){
+  const approvedHours = volunteerHours.filter(row=>row.status==='approved');
+  const total = approvedHours.reduce((sum,row)=>sum + Number(row.hours || 0),0);
+  document.getElementById('totalHours').textContent = Number.isInteger(total) ? total : total.toFixed(1);
+  document.getElementById('signupCount').textContent = volunteerSignups.length;
+
+  const hoursList=document.getElementById('hoursList');
+  hoursList.innerHTML = volunteerHours.length ? volunteerHours.map(row=>{
+    const status=row.status||'pending';
+    const label=status.charAt(0).toUpperCase()+status.slice(1);
+    return `<div class="activity-item"><div><strong>${escapeHtml(row.opportunity_name)}</strong><span>${new Date(row.created_at).toLocaleDateString()} · <span class="admin-status-badge ${escapeHtml(status)}">${escapeHtml(label)}</span></span></div><strong>${status==='approved'?'+':''}${Number(row.hours)}h</strong></div>`;
+  }).join('') : '<p class="activity-empty">No volunteer hours submitted yet.</p>';
+
+  const signupList=document.getElementById('signupList');
+  signupList.innerHTML = volunteerSignups.length ? volunteerSignups.map(row=>`<div class="activity-item"><div><strong>${escapeHtml(row.opportunity_name)}</strong><span>${escapeHtml(row.day || '')}${row.time ? ' · '+escapeHtml(row.time):''}</span></div><button class="signup-btn signed" data-cancel-signup="${escapeHtml(row.opportunity_id)}">Signed up</button></div>`).join('') : '<p class="activity-empty">No opportunity sign-ups yet.</p>';
+  signupList.querySelectorAll('[data-cancel-signup]').forEach(btn=>btn.addEventListener('click',()=>cancelSignup(btn.dataset.cancelSignup)));
+}
+
+async function checkAdminAccess(){
+  const nav=document.getElementById('adminNavLink');
+  const btn=document.getElementById('adminDashboardBtn');
+  const help=document.getElementById('adminAccessHelp');
+  if(!currentVolunteerUser){ if(nav) nav.style.display='none'; if(btn) btn.style.display='none'; if(help) help.style.display='none'; return false; }
+  const {data,error}=await supabaseClient.from('programme_admins').select('email').eq('email',(currentVolunteerUser.email||'').toLowerCase()).maybeSingle();
+  const isAdmin=!!data && !error;
+  if(nav) nav.style.display=isAdmin?'inline-flex':'none';
+  if(btn) btn.style.display=isAdmin?'inline-flex':'none';
+  // Explain why the admin area may not appear instead of silently hiding it.
+  if(help){
+    const isLikelyProgrammeAdmin=(currentVolunteerUser.email||'').toLowerCase()==='aphirak2063@headstartphuket.com';
+    help.style.display=(!isAdmin && isLikelyProgrammeAdmin)?'block':'none';
+  }
+  if(error) console.error('Admin membership lookup failed:',error);
+  return isAdmin;
+}
+
+async function loadAdminHours(){
+  const body=document.getElementById('adminHoursBody');
+  if(!body) return;
+  const allowed=await checkAdminAccess();
+  if(!allowed){
+    body.innerHTML='<tr><td colspan="6" class="admin-empty">You do not have administrator access.</td></tr>';
+    return;
+  }
+  body.innerHTML='<tr><td colspan="6">Loading…</td></tr>';
+  const {data,error}=await supabaseClient.from('volunteer_hours').select('*').order('created_at',{ascending:false});
+  if(error){ console.error(error); body.innerHTML='<tr><td colspan="6" class="admin-empty">Could not load submissions. Check the Supabase admin policies.</td></tr>'; return; }
+  const rows=(data||[]).filter(row=>(row.status||'pending')==='pending');
+  if(!rows.length){ body.innerHTML='<tr><td colspan="6" class="admin-empty">No pending volunteer hours.</td></tr>'; return; }
+  body.innerHTML=rows.map(row=>`<tr>
+    <td><b>${escapeHtml(row.student_name || 'Student')}</b><br><span class="meta">${escapeHtml(row.student_email || '')}</span></td>
+    <td>${escapeHtml(row.opportunity_name)}</td>
+    <td><b>${Number(row.hours)}h</b></td>
+    <td>${new Date(row.created_at).toLocaleString()}</td>
+    <td><span class="admin-status-badge">Pending</span></td>
+    <td><div class="admin-action-row"><button class="admin-action admin-approve" data-approve-hour="${escapeHtml(row.id)}">Approve</button><button class="admin-action admin-reject" data-reject-hour="${escapeHtml(row.id)}">Reject</button></div></td>
+  </tr>`).join('');
+  body.querySelectorAll('[data-approve-hour]').forEach(btn=>btn.addEventListener('click',()=>reviewHour(btn.dataset.approveHour,'approved')));
+  body.querySelectorAll('[data-reject-hour]').forEach(btn=>btn.addEventListener('click',()=>reviewHour(btn.dataset.rejectHour,'rejected')));
+}
+
+async function reviewHour(id,status){
+  const allowed=await checkAdminAccess();
+  if(!allowed){ alert('You do not have administrator access.'); return; }
+  const {error}=await supabaseClient.from('volunteer_hours').update({status,reviewed_at:new Date().toISOString(),reviewed_by:currentVolunteerUser.id}).eq('id',id);
+  if(error){ console.error(error); alert('Could not update this submission. Check the Supabase admin policies.'); return; }
+  await loadAdminHours();
+}
+
+async function addVolunteerHours(index){
+  if(!currentVolunteerUser){ alert('Please log in first.'); return; }
+  const input=document.querySelector(`[data-hours-input="${index}"]`);
+  const hours=Number(input?.value);
+  if(!hours || hours<=0 || hours>24){ alert('Enter a number of hours between 0.5 and 24.'); return; }
+  const p=PROGRAMMES[index];
+  const {error}=await supabaseClient.from('volunteer_hours').insert({
+    user_id:currentVolunteerUser.id,
+    student_name:currentVolunteerUser.user_metadata?.name || currentVolunteerUser.email?.split('@')[0] || 'Student',
+    student_email:currentVolunteerUser.email || '',
+    opportunity_id:opportunityId(index),
+    opportunity_name:p.name,
+    hours,
+    status:'pending'
+  });
+  if(error){console.error(error);alert('Could not save the hours. Make sure the Supabase activity tables have been created.');return;}
+  input.value='';
+  await loadVolunteerActivity();
+}
+
+async function toggleSignup(index){
+  if(!currentVolunteerUser){ alert('Please log in first.'); return; }
+  const p=PROGRAMMES[index];
+  const id=opportunityId(index);
+  const existing=volunteerSignups.find(x=>x.opportunity_id===id);
+  if(existing){ await cancelSignup(id); return; }
+  const time=p.start&&p.end?`${p.start}–${p.end}`:'';
+  const {error}=await supabaseClient.from('volunteer_signups').insert({
+    user_id:currentVolunteerUser.id,
+    opportunity_id:id,
+    opportunity_name:p.name,
+    programme_type:programmeType(p),
+    day:p.day||'',
+    time,
+    teacher:p.teacher||''
+  });
+  if(error){console.error(error);alert(error.code==='23505'?'You are already signed up for this opportunity.':'Could not save your sign-up. Make sure the Supabase activity tables have been created.');return;}
+  await loadVolunteerActivity();
+}
+
+async function cancelSignup(id){
+  if(!currentVolunteerUser) return;
+  const {error}=await supabaseClient.from('volunteer_signups').delete().eq('user_id',currentVolunteerUser.id).eq('opportunity_id',id);
+  if(error){console.error(error);alert('Could not cancel this sign-up.');return;}
+  await loadVolunteerActivity();
+}
+
+const INCLASS = [{"subject":"Maths","programme":"Maths Y7","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Maths","programme":"Maths Y8","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Maths","programme":"Maths Y9","teacher":"","day":"Tuesday","start":"Period 3","end":"","room":""},{"subject":"Maths","programme":"Maths Y10","teacher":"","day":"Tuesday or Thursday","start":"Period 2 or Period 5","end":"","room":""},{"subject":"Science","programme":"Year 9 Science","teacher":"Ashish Mukundan","day":"Monday","start":"08:20","end":"09:15","room":""},{"subject":"Science","programme":"Year 8 Science","teacher":"Ashish Mukundan","day":"Monday","start":"13:25","end":"14:20","room":""},{"subject":"Science","programme":"Year 8 Science","teacher":"Ashish Mukundan","day":"Wednesday","start":"13:25","end":"14:20","room":""},{"subject":"Science","programme":"Year 8 Science","teacher":"Ashish Mukundan","day":"Thursday","start":"08:20","end":"09:15","room":""},{"subject":"Science","programme":"Year 11A Chemistry (Coordinated Science) – Core","teacher":"Mrs Davis","day":"Wednesday","start":"10:35","end":"11:30","room":""},{"subject":"Science","programme":"Year 11A Chemistry (Coordinated Science) – Core","teacher":"Mrs Davis","day":"Friday","start":"08:20","end":"09:15","room":""},{"subject":"Science","programme":"Year 10A Chemistry (Coordinated Science) – Core","teacher":"Jill Owen","day":"Wednesday","start":"09:20","end":"10:15","room":""},{"subject":"Science","programme":"Year 10A Chemistry (Coordinated Science) – Core","teacher":"Jill Owen","day":"Tuesday","start":"13:25","end":"14:20","room":""},{"subject":"Science","programme":"Year 11A Biology (Coordinated Science) – Core","teacher":"Jill Owen","day":"Tuesday","start":"09:20","end":"10:15","room":""},{"subject":"Science","programme":"Year 10A Biology (Coordinated Science) – Core","teacher":"Mrs Neaves","day":"Tuesday","start":"","end":"","room":""},{"subject":"Science","programme":"Year 10B Biology (Coordinated Science) – Core","teacher":"Mrs Neaves","day":"Wednesday","start":"09:20","end":"10:15","room":""},{"subject":"Science","programme":"Year 10A Biology (Coordinated Science) – Core","teacher":"Jill Owen","day":"Thursday","start":"09:20","end":"10:15","room":""},{"subject":"Science","programme":"Year 10A Biology (Coordinated Science) – Core","teacher":"Neal Roscoe","day":"Thursday","start":"10:35","end":"11:30","room":""},{"subject":"Science","programme":"Year 10A Biology (Coordinated Science) – Core","teacher":"Neal Roscoe","day":"Friday","start":"10:35","end":"11:30","room":""},{"subject":"Science","programme":"Year 11 Physics (Coordinated Science) – Core","teacher":"Ashish Mukundan","day":"Monday","start":"09:20","end":"10:15","room":""},{"subject":"Science","programme":"Year 11 Physics (Coordinated Science) – Core","teacher":"Ashish Mukundan","day":"Friday","start":"13:25","end":"14:20","room":""},{"subject":"Commerce/Computing","programme":"ICT Year 7","teacher":"Nosheen Khan","day":"Monday","start":"08:20","end":"09:15","room":""},{"subject":"Commerce/Computing","programme":"ICT Year 7","teacher":"Nosheen Khan","day":"Wednesday","start":"10:35","end":"11:30","room":""},{"subject":"Humanities","programme":"Geography Y10","teacher":"Athena Coddington-Wiratunga","day":"Wednesday","start":"10:35","end":"11:30","room":""},{"subject":"Humanities","programme":"Geography Y10","teacher":"Athena Coddington-Wiratunga","day":"Thursday","start":"08:20","end":"09:15","room":""},{"subject":"Humanities","programme":"Geography Y10","teacher":"Athena Coddington-Wiratunga","day":"Friday","start":"13:25","end":"14:20","room":""},{"subject":"Humanities","programme":"Geography Y11","teacher":"Athena Coddington-Wiratunga","day":"Monday","start":"14:25","end":"15:20","room":""},{"subject":"Humanities","programme":"Geography Y11","teacher":"Athena Coddington-Wiratunga","day":"Tuesday","start":"08:20","end":"09:15","room":""},{"subject":"Humanities","programme":"Geography Y11","teacher":"Athena Coddington-Wiratunga","day":"Wednesday","start":"09:20","end":"10:15","room":""},{"subject":"Humanities","programme":"History Y11","teacher":"Hayleigh Quigg","day":"","start":"","end":"","room":""},{"subject":"Languages","programme":"Year 8 French Foreign Language","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Languages","programme":"Year 9 Mandarin Foreign Language","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Languages","programme":"Year 8 Mandarin First Language","teacher":"Lili Huang","day":"Wednesday","start":"10:35","end":"11:30","room":""},{"subject":"Languages","programme":"Year 10 Mandarin Foreign Language","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Languages","programme":"Year 7 Russian","teacher":"","day":"","start":"","end":"","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Greaney","day":"Monday","start":"13:25","end":"14:20","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 11","teacher":"Ms Greaney","day":"Tuesday","start":"10:35","end":"12:30","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Greaney","day":"Wednesday","start":"13:25","end":"14:20","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 11","teacher":"Ms Greaney","day":"Thursday","start":"14:25","end":"15:20","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Greaney","day":"Friday","start":"11:35","end":"12:30","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 11","teacher":"Ms Clayton","day":"Monday","start":"08:20","end":"09:15","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 11","teacher":"Ms Clayton","day":"Monday","start":"13:25","end":"14:20","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Clayton","day":"Tuesday","start":"14:25","end":"15:20","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Clayton","day":"Wednesday","start":"08:20","end":"09:15","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 10","teacher":"Ms Clayton","day":"Thursday","start":"11:35","end":"12:30","room":""},{"subject":"Creative & Performing Arts (CAPA)","programme":"Art Year 11","teacher":"Ms Clayton","day":"Friday","start":"09:20","end":"10:15","room":""},{"subject":"EAL","programme":"ESL: Years 10 & 11 (1 Class)","teacher":"Lauren Davidson","day":"","start":"","end":"","room":""},{"subject":"Sports","programme":"PE Y10","teacher":"Scott Francis","day":"","start":"","end":"","room":""},{"subject":"Sports","programme":"Early Years PE","teacher":"Ms McMeekin","day":"","start":"10:35","end":"11:30","room":""},{"subject":"Sports","programme":"Year 5 Blue PE","teacher":"Mr Rothwell","day":"","start":"13:25","end":"14:20","room":""},{"subject":"English","programme":"English Language Y10 (1st Class)","teacher":"","day":"","start":"","end":"","room":""},{"subject":"English","programme":"English Language Y10 (2nd Class)","teacher":"","day":"","start":"","end":"","room":""}];
+
+function escapeHtml(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+}
+function programmeType(p){
+  if (p.type) return p.type;
+  if (p.name.includes('VAPP')) return 'VAPP';
+  return 'Booster';
+}
+function renderSubjects(){
+  const root=document.getElementById('homeSubjects');
+  if(!root) return;
+  const subjects=[["Creative & Performing Arts",["CAPA Create","Art Club","Guitar & Ukulele","Music","Drama","Art Exam","Design & Technology"]],["English",["English"]],["Maths",["Maths"]],["Science",["Science","Biology & Chemistry","Physics"]],["Humanities",["Geography","History"]],["BTEC & PE",["PE","Sport Level 2 BTEC Clinic"]],["Commerce & Computing",["Computer Science","Business Studies"]],["Languages",["Russian"]],["Thai",["Thai First Language"]],["VAPPs",["Science Scholars","Communication Club","Advanced Music Ensemble","Theatre Play"]],["EAL",["ESL"]]];
+  root.innerHTML=subjects.map(([title,items])=>`<article class="dept"><h3>${escapeHtml(title)}</h3><ul>${items.map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ul></article>`).join('');
+}
+
+let activeFilter='all';
+function isLive(p){
+  if(!p.day || !p.start || !p.end) return false;
+  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const now=new Date();
+  if(days[now.getDay()]!==p.day) return false;
+  const mins=now.getHours()*60+now.getMinutes();
+  const toMin=x=>{const [h,m]=x.split(':').map(Number);return h*60+m};
+  return mins>=toMin(p.start)&&mins<toMin(p.end);
+}
+function renderProgrammes(){
+  const q=(document.getElementById('programmeSearch')?.value||'').toLowerCase().trim();
+  const list=PROGRAMMES.map((p,index)=>({p,index})).filter(({p})=>{
+    const t=programmeType(p);
+    return (activeFilter==='all'||t===activeFilter) && (!q||`${p.name} ${p.teacher} ${p.day} ${p.years} ${p.room}`.toLowerCase().includes(q));
+  });
+  document.getElementById('programmeGrid').innerHTML=list.map(({p,index})=>{
+    const t=programmeType(p), live=isLive(p);
+    const cls=t==='VAPP'?'tag-vapp':t==='ECA'?'tag-eca':'tag-booster';
+    const signed=volunteerSignups.some(x=>x.opportunity_id===opportunityId(index));
+    return `<article class="programme ${live?'live-card':''}">
+      ${live?'<span class="live-label"><span class="live-badge"><span class="dot"></span>Happening now</span></span>':''}
+      <div class="programme-top"><span class="tag ${cls}">${escapeHtml(t==='ECA'?'ECA / Club':t)}</span></div>
+      <h3>${escapeHtml(p.name.replace(/\s+—\s+2-12|\s+—\s+2-18/g,''))}</h3>
+      <div class="meta"><b>${escapeHtml(p.years||'')}</b>${p.teacher?' · '+escapeHtml(p.teacher):''}</div>
+      <div class="meta">${p.day?escapeHtml(p.day):''}${p.start?' · '+escapeHtml(p.start)+'–'+escapeHtml(p.end):''}</div>
+      <div class="pills">${p.room?`<span class="pill">${escapeHtml(p.room)}</span>`:''}</div>
+      <div class="programme-actions">
+        <button class="signup-btn ${signed?'signed':''}" data-signup-index="${index}">${signed?'Signed up':'Sign up'}</button>
+        <div class="hours-log"><input type="number" min="0.5" max="24" step="0.5" placeholder="Hours" data-hours-input="${index}" aria-label="Hours completed for ${escapeHtml(p.name)}"><button data-hours-index="${index}">Add hours</button></div>
+      </div>
+    </article>`;
+  }).join('') || '<div class="programme" style="grid-column:1/-1;text-align:center"><h3>No opportunities found</h3><div class="meta">Try another search or filter.</div></div>';
+
+  document.querySelectorAll('[data-signup-index]').forEach(btn=>btn.addEventListener('click',()=>toggleSignup(Number(btn.dataset.signupIndex))));
+  document.querySelectorAll('[data-hours-index]').forEach(btn=>btn.addEventListener('click',()=>addVolunteerHours(Number(btn.dataset.hoursIndex))));
+}
+
+function renderInClass(){
+  const body=document.getElementById('inclassBody');
+  body.innerHTML=INCLASS.map(p=>{
+    const live=isLive(p);
+    const day=p.day?escapeHtml(p.day):'—';
+    const time=p.start?`${escapeHtml(p.start)}–${escapeHtml(p.end)}`:(p.day && !p.start?escapeHtml(p.day):'—');
+    return `<tr class="${live?'live':''}">
+      <td><b>${escapeHtml(p.programme)}</b></td><td>${escapeHtml(p.teacher||'—')}</td>
+      <td>${day}</td><td>${time}</td>
+      <td>${live?'<span class="live-badge"><span class="dot"></span>Happening now</span>':'—'}</td>
+    </tr>`;
+  }).join('');
+}
+function showPage(name, updateHash=true){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  document.querySelectorAll('[data-page-link]').forEach(a=>a.classList.toggle('active',a.dataset.pageLink===name));
+  if(updateHash) history.replaceState(null,'','#'+name);
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(name==='secondary') renderProgrammes();
+  if(name==='account' && currentVolunteerUser) loadVolunteerActivity();
+  if(name==='admin') loadAdminHours();
+}
+document.querySelectorAll('[data-page-link]').forEach(a=>a.addEventListener('click',e=>{
+  const name=a.dataset.pageLink;
+  if(name){e.preventDefault();showPage(name);}
+}));
+document.querySelectorAll('#typeFilters .filter').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('#typeFilters .filter').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); activeFilter=b.dataset.filter; renderProgrammes();
+}));
+document.getElementById('programmeSearch').addEventListener('input',renderProgrammes);
+document.getElementById('menuBtn').addEventListener('click',()=>{
+  const nav=document.querySelector('.navlinks');
+  nav.style.display=nav.style.display==='flex'?'none':'flex';
+  nav.style.position='absolute';nav.style.right='18px';nav.style.top='72px';nav.style.background='#fff';
+  nav.style.padding='10px';nav.style.flexDirection='column';nav.style.alignItems='stretch';
+  nav.style.boxShadow='0 15px 40px rgba(0,0,0,.12)';nav.style.border='1px solid var(--line)';nav.style.borderRadius='15px';
+});
+function route(){
+  const hash=location.hash.replace('#','')||'home';
+  const allowed=['home','secondary','inclass','leadership','more','account'];
+  showPage(allowed.includes(hash)?hash:'home',false);
+}
+window.addEventListener('hashchange',route);
+renderSubjects();renderProgrammes();renderInClass();updateAccountPage();route();
+setInterval(()=>{renderProgrammes();renderInClass()},30000);
+
+const MOTIVATION_QUOTES = [
+  "Small actions can create meaningful change.",
+  "You do not have to be an expert to make a difference.",
+  "Experience grows when you choose to get involved.",
+  "Leadership starts with being willing to help.",
+  "The best way to learn is often to do, support and reflect.",
+  "One hour of your time can make a real difference to someone else.",
+  "Confidence comes from taking the first step.",
+  "Your experience can become someone else’s opportunity to learn.",
+  "Great mentors are not perfect — they are present, patient and willing to help.",
+  "What you contribute today can become part of someone else’s success story."
+];
+let lastMotivationQuote=-1;
+function showRandomMotivationQuote(){
+  const el=document.getElementById('motivationQuote');
+  if(!el) return;
+  let next=Math.floor(Math.random()*MOTIVATION_QUOTES.length);
+  if(MOTIVATION_QUOTES.length>1 && next===lastMotivationQuote) next=(next+1)%MOTIVATION_QUOTES.length;
+  lastMotivationQuote=next;
+  el.textContent=MOTIVATION_QUOTES[next];
+}
+document.getElementById('newQuoteBtn')?.addEventListener('click',showRandomMotivationQuote);
+showRandomMotivationQuote();
+
+</script>
+</body>
+</html>
